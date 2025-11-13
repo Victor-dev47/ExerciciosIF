@@ -1,9 +1,7 @@
 <?php
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $distancia = $_POST["distancia"];
-    $curta = $_POST["curta"];
-    $longa = $_POST["longa"];
+    $tipo = $_POST["tipo"];
 
     if ($tipo == "curta") {
         $valor = $distancia * 0.50;
@@ -15,7 +13,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<h3>Tipo de viagem inválido! Use 'curta' ou 'longa'.</h3>";
     }
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -24,19 +21,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Exercicio09</title>
-    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="container">
-    <h2>Verifique sua  distancia</h2>
-<form action="" method="post">
-    
-    <label for="numero">Numero</label>
-    <input type="numero" name="numero"required><br><br>
-    <button type="submit">Verificar Numero</button>
+<h2>valor da viagem</h2>
+        <form action="" method="post">
+            <label for="distancia">Distância (km):</label>
+            <input type="number" name="distancia" required><br><br>
 
+            <label for="tipo">Tipo de viagem:</label>
+            <select name="tipo" required>
+                <option value="curta">Curta</option>
+                <option value="longa">Longa</option>
+            </select><br><br>
 
-</form> 
-</div>
-</body>
+            <button type="submit">Calcular</button>
+       </body>
 </html>
