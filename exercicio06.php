@@ -4,14 +4,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $numero2 = $_POST["numero2"];
     $numero3 = $_POST["numero3"];
 
-   if (count(array_unique([$numero1, $numero2, $numero3])) < 3) {
-        echo "<h3>Os valores devem ser diferentes!</h3>";
-    } else {
-        $maior = max($numero1, $numero2, $numero3);
-        echo "<h3>O maior valor é: $maior</h3>";
-    }
+ if( $numero1 >= $numero2) {
+  echo"o primeiro numero é maior";
+ }elseif($numero2 >= $numero3) {
+  echo"o segundo numero é maior";
+ }elseif($numero3 >= $numero1) {
+  echo"o terceiro numero é maior";
+ }
+
 }
- 
 ?>
 
 <!DOCTYPE html>
