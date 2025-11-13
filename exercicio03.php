@@ -1,6 +1,5 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Corrige o nome do campo para "valor"
     $compra = $_POST["valor"];
 
     if ($compra > 100) {

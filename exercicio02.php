@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $numero = $_POST["numero"];
-
+    
     if ($numero % 2 == 0) {
         echo "<p>O número $numero é PAR.</p>";
     } else {
@@ -16,7 +16,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Par ou Ímpar</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+<div class="container">
 <body>
     <h2>Verifique se o número é par ou ímpar</h2>
     <form action="" method="post">
@@ -24,5 +26,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <input type="number" name="numero" required>
         <button type="submit">Verificar</button>
     </form>
+    </div>
 </body>
 </html>
